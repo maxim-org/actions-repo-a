@@ -21,6 +21,12 @@ jobs:
     - name: Checkout A code
       uses: actions/checkout@v2
 
+    - name: Check repo A files
+      run: |
+        echo "PWD:"
+        pwd
+        ls -la
+
     - name: Checkout B code
       uses: actions/checkout@v2
       with:
@@ -28,7 +34,7 @@ jobs:
         repository: maxim-org/actions-repo-b
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Check repo B files
       run: |
         echo "PWD:"
         pwd
